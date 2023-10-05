@@ -14,7 +14,7 @@ from PyQt5.QtWidgets import QWidget
 class FileSystem(QWidget):
     def __init__(self):
         QWidget.__init__(self)
-        self.setWindowTitle("FileSystem")
+        self.setWindowTitle(constants.APP_NAME)
         self.resize(constants.WINDOW_WIDTH, constants.WINDOW_HEIGHT)
         self.tree = QTreeWidget()
         self.list = []
@@ -25,7 +25,7 @@ class FileSystem(QWidget):
     def completion_tree(self):
         self.tree.setColumnCount(2)
         self.tree.setColumnWidth(0, constants.COLUMN_WIDTH)
-        self.tree.setHeaderLabels(['FileSystem', 'Path'])
+        self.tree.setHeaderLabels([constants.APP_NAME, 'Path'])
         home = str(Path.home())
         root = QTreeWidgetItem(self.tree)
         root.setText(0, home)
