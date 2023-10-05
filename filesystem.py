@@ -33,7 +33,6 @@ class FileSystem(QWidget):
 
 
     def traversing_directories(self, path, parent):
-        parent.setIcon(1, QtGui.QIcon("./fold.png"))
         for name in listdir(path):
             child = QTreeWidgetItem()
             child.setText(0, name)
