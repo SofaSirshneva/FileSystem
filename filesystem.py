@@ -61,11 +61,8 @@ class FileSystem(QWidget):
                 self.error_label.setText("")
                 i.setBackground(0, brush)
 
-                while i.parent():
-                    if not i.parent().isExpanded():
-                        self.tree.expandItem(i.parent())
-                    else:
-                        break
+                while i.parent() and not i.parent().isExpanded():
+                    self.tree.expandItem(i.parent())
                     i = i.parent()
         else:
              self.error_label.setText("Empty query")
