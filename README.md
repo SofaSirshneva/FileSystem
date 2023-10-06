@@ -15,5 +15,5 @@ Python, PyQt
 
 ## Установка
 - Прилжение можно установить через библиотеку PyInstaller.
-- Из папки проекта: `python -m pyinstaller -F filesystem.py`
+- Из папки проекта: `python -m PyInstaller -F filesystem.py`
 - После этого в директории dist появится исполняемый файл.
